@@ -89,9 +89,23 @@ body{
 .main__triangle img{
     bottom: 0px;
     position: relative;
-    top: 6px;
+    top: 7px;
     width: 100%;
     max-width: 1440px;
+}
+.main__triangle-inner {
+    position: relative;
+    max-width: 1440px; 
+    width: 100%;
+}
+img.play-btn {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    bottom: 25px;
+    right: 32px;
+    cursor: pointer;
+    top: unset;
 }
 .join-us{
     padding: 80px 90px;
