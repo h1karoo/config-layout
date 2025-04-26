@@ -52,7 +52,7 @@ function createSpeakerCard(speaker) {
     
     if (logo) {
       logo.addEventListener('click', function() {
-        window.location.href = './home.html';
+        window.location.href = './index.html';
       });
       logo.style.cursor = 'pointer';
     }
