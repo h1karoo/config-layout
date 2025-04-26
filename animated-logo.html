@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анимация при наведении</title>
+  <link rel="stylesheet" href="./styles/animated-logo.css">
+</head>
+<body class="main__logo">
+  <!-- Буква C -->
+  <div class="box" id="animationContainerC">
+    <img id="letterC" src="./src/letters/C.svg" alt="">
+    <div id="circleC" class="shape"></div>
+    <div id="squareC" class="shape squareC"></div>
+  </div>
+
+  <!-- Буква O -->
+  <div class="box" id="animationContainerO">
+    <img id="letterO" src="./src/letters/O.svg" alt="">
+    <div id="squareO" class="shape"></div>
+  </div>
+
+  <div class="box" id="animationContainerN">
+    <div class="n-wrapper" id="nWrapper">
+      <img id="n2" src="./src/letters/n2.svg" alt="n2">
+      <img id="n1" src="./src/letters/n1.svg" alt="n1">
+      <img id="n3" src="./src/letters/n3.svg" alt="n3">
+    </div>
+  </div>
+
+  <div id="animationContainerF" class="box">
+    <img src="./src/letters/f1.svg" id="f1" class="f-shape" />
+    <img src="./src/letters/f2.svg" id="f2" class="f-shape" />
+    <img src="./src/letters/f3.svg" id="f3" class="f-shape" />
+  </div>
+
+  <div id="animationContainerI">
+    <img id="i1" class="i-shape" src="./src/letters/i1.svg" alt="i1">
+    <img id="i2" class="i-shape" src="./src/letters/i2.svg" alt="i2">
+    <div id="i3" class="i-oval"></div>
+  </div>
+  
+  <div id="animationContainerG">
+    <div class="g-wrapper">
+        <img id="g1" src="./src/letters/g1.svg" alt="g1">
+        <img id="g2" src="./src/letters/g2.svg" alt="g2">
+    </div>
+  </div>
+  <script src="./js/animated-logo.js"></script>
+</body>
+</html>

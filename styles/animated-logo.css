@@ -1,0 +1,388 @@
+.main__logo {
+  margin: 0;
+  /* background: #fff; */
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: 10px;
+}
+/* Буква С */
+.box img,
+.shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 1s ease;
+  transform-origin: center;
+}
+.shape {
+  background: #252525;
+  opacity: 0;
+  transform: scale(0);
+}
+.squareC {
+  border-radius: 30px;
+  transform: rotate(90deg) scale(0);
+}
+.squareO-small {
+  transform: rotate(45deg) scale(0.5);
+}
+.squareO-big {
+  transform: rotate(90deg) scale(0.6);
+}
+#circleC {
+  border-radius: 50%; 
+}
+.rotateShrink {
+  animation: rotateShrinkAnimation 2s forwards;
+}
+@keyframes rotateShrinkAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
+/* Буква N */
+#animationContainerN {
+  position: relative;
+  width: 105px;
+  height: 150px;
+  margin: 20px;
+}
+#n1, #n2, #n3 {
+  position: absolute;
+  transition: transform 1s ease;
+}
+#n1 {
+  top: 10px;
+  left: 0px;
+  height: 60px;
+}
+#n2 {
+  top: 20px;
+  left: 0;
+  right: unset;
+  width: 40px;
+  height: 100%;
+}
+#n3 {
+  top: 20px;
+  right: 0;
+  left: unset;
+  width: 40px;
+  height: 100%;
+}
+@keyframes moveToCenterN1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0px, 20px);
+  }
+}
+@keyframes moveToCenterN2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(15.5px, -20px);
+  }
+}
+@keyframes moveToCenterN3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-14px, -20px);
+  }
+}
+@keyframes rotateWrapper {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(55deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.n-wrapper {
+  height: 100%;
+}
+
+@keyframes rotateWrapperBack {
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moveBackN1 {
+  0% {
+    transform: translate(0px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveBackN2 {
+  0% {
+    transform: translate(15.5px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveBackN3 {
+  0% {
+    transform: translate(-14px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* Буква F */
+#animationContainerF {
+  position: relative;
+  width: 100px;
+  height: 150px;
+}
+.f-shape {
+  position: absolute;
+  transition: all 1s ease;
+}
+#f1 {
+  top: 10px;
+  left: 0;
+  height: max-content;
+}
+
+#f2 {
+  top: 50px;
+  left: 0;
+  height: max-content;
+}
+#f3 {
+  bottom: 20px;
+  left: 0;
+  top: unset;
+  width: 42%;
+  height: max-content;
+}
+#animationContainerF:hover #f1 {
+  animation: f1Animation 1s infinite alternate ease-in-out;
+}
+#animationContainerF:hover #f2 {
+  animation: f2Animation 1s infinite alternate ease-in-out;
+}
+#animationContainerF:hover #f3 {
+  animation: f3Disappearance 1s infinite alternate ease-in-out;
+}
+@keyframes f1Animation {
+  0% {
+    top: 10px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 50px;
+    transform: rotate(-50deg);
+  }
+}
+@keyframes f2Animation {
+  0% {
+    top: 50px;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 50px;
+    left: 0px;
+    transform: rotate(-130deg);
+  }
+}
+@keyframes f3Disappearance {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#animationContainerF:not(:hover) #f1,
+#animationContainerF:not(:hover) #f2,
+#animationContainerF:not(:hover) #f3 {
+  animation: none;
+  transition: all 1s ease;
+}
+#animationContainerF:not(:hover) #f1 {
+  top: 10px;
+  transform: rotate(0deg);
+}
+#animationContainerF:not(:hover) #f2 {
+  top: 50px;
+  left: 0;
+  transform: rotate(0deg);
+}
+#animationContainerF:not(:hover) #f3 {
+  opacity: 1;
+}
+/* Буква I */
+#animationContainerI {
+  position: relative;
+  width: 100px;
+  height: 150px; 
+  overflow: hidden; 
+}
+.i-shape {
+  position: absolute;
+  height: auto;
+}
+#i1 {
+  width: 55%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 1s ease, top 1s ease, opacity 1s ease;
+}
+#i2 {
+  width: 55%;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 1s ease, top 1s ease, opacity 1s ease;
+}
+#i3 {
+  width: 55%;
+  height: 80%;
+  background-color: #252525;
+  border-radius: 100% / 50%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: center;
+  position: absolute;
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+#animationContainerI.animateI #i1 {
+  animation: i1MoveDown 2s forwards, i1ReturnToOriginal 1s forwards 4s;
+}
+#animationContainerI.animateI #i2 {
+  animation: i2MoveUpAndHide 0.5s forwards, i2AppearInCenter 1s forwards 2s, i2ReturnToOriginal 1s forwards 4s; 
+}
+#animationContainerI.animateI #i3 {
+  animation: i3Expand 1s forwards 1s, i3Collapse 1s forwards 2.5s;
+}
+@keyframes i1MoveDown {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  90% {
+    top: 50px;
+    opacity: 1; 
+  }
+  100% {
+    top: 50px; 
+    opacity: 0; 
+  }
+}
+@keyframes i2MoveUpAndHide {
+  0% {
+    top: 70px;
+    opacity: 1;
+  }
+  100% {
+    top: -20px;
+    opacity: 0;
+  }
+}
+@keyframes i3Expand {
+  0% {
+    transform: translateX(-50%) scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes i3Collapse {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleY(0); 
+    opacity: 0;
+  }
+}
+@keyframes i2AppearInCenter {
+  0% {
+    top: -20px; 
+    opacity: 0;
+  }
+  70% {
+    top: 30%;
+    opacity: 0;
+  }
+  100% {
+    top: 30%;
+    opacity: 1;
+  }
+}
+@keyframes i2ReturnToOriginal {
+  0% {
+    top: 30%;
+    opacity: 1;
+  }
+  100% {
+    top: 70px;
+    opacity: 1;
+  }
+}
+@keyframes i1ReturnToOriginal {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 10px;
+    opacity: 1;
+  }
+}
+#animationContainerG{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+#g1{
+  position: absolute;
+  width: 95px;
+  height: 95px;
+}
+#g2{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  bottom: 0px;
+  top: unset;
+  right: 0px;
+}
+.g-wrapper{
+  height: 100%;
+}
